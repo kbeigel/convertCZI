@@ -8,11 +8,11 @@ if __name__ == '__main__':
 
     print("Saving CZI as OME-TIFF")
 
-    # Get current date and time (BEFORE main fn)
-    print("Processing START time:", datetime.now())
-
     # Get start time for timer
-    start = time.time()
+    start = datetime.now()
+
+    # Get current date and time (BEFORE main fn)
+    print("Processing START time:", start)
 
     # MAIN FUNCTION STUFF GOES HERE #######################
     # commenting this out for now just to test timer
@@ -23,16 +23,20 @@ if __name__ == '__main__':
 
     # END OF MAIN FUNCTION STUFF ##########################
 
-    # Print current data and time (AFTER main fn)
-    print("Processing END time:", datetime.now())
+    end = datetime.now()
 
-    end = time.time()
-    elapsed = end - start
+    # Print current data and time (AFTER main fn)
+    print("Processing END time:", end)
+
+    elapsed = (end - start)
+    print(elapsed)
+
+    elapsed_seconds = int(elapsed.seconds)
 
     # Printing elapsed time
-    if elapsed < 60:
-        print("Time elapsed: " + str(round(elapsed, 3)) + " seconds")
-    elif elapsed < 3600:
-        print("Time elapsed: " + str(round(elapsed / 60, 3)) + " minutes")
+    if elapsed_seconds < 60:
+        print("Time elapsed: " + str(round(elapsed_seconds, 3)) + " seconds")
+    elif elapsed_seconds < 3600:
+        print("Time elapsed: " + str(round(elapsed_seconds / 60, 3)) + " minutes")
     else:
-        print("Time elapsed: " + str(round(elapsed / 3600, 3)) + " hours")
+        print("Time elapsed: " + str(round(elapsed_seconds / 3600, 3)) + " hours")
