@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import time
 from aicsimageio import AICSImage
 
@@ -9,7 +9,7 @@ if __name__ == '__main__':
     print("Saving CZI as OME-TIFF")
 
     # Get current date and time (BEFORE main fn)
-    print("Processing START time:", datetime.datetime.now())
+    print("Processing START time:", datetime.now())
 
     # Get start time for timer
     start = time.time()
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     # END OF MAIN FUNCTION STUFF ##########################
 
     # Print current data and time (AFTER main fn)
-    print("Processing END time:", datetime.datetime.now())
+    print("Processing END time:", datetime.now())
 
     end = time.time()
     elapsed = end - start
