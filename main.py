@@ -37,8 +37,8 @@ if __name__ == '__main__':
 
     # Printing elapsed time
     if elapsed_seconds < 60:
-        print("Time elapsed: " + str(round(elapsed_seconds, 3)) + " seconds")
+        print("Time elapsed: " + str(elapsed_seconds) + " seconds")
     elif elapsed_seconds < 3600:
-        print("Time elapsed: " + str(round(elapsed_seconds / 60, 3)) + " minutes")
+        print("Time elapsed: " + str(elapsed_seconds / 60) + " minutes")
     else:
-        print("Time elapsed: " + str(round(elapsed_seconds / 3600, 3)) + " hours")
+        print("Time elapsed: " + str(elapsed_seconds / 3600) + " hours")
