@@ -28,9 +28,11 @@ if __name__ == '__main__':
     # Print current data and time (AFTER main fn)
     print("Processing END time:", end)
 
+    # Make timedelta object
     elapsed = (end - start)
     print(elapsed)
 
+    # Get the total time change in seconds from timedelta object
     elapsed_seconds = int(elapsed.total_seconds())
 
     # Printing elapsed time
