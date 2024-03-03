@@ -31,7 +31,7 @@ if __name__ == '__main__':
     elapsed = (end - start)
     print(elapsed)
 
-    elapsed_seconds = int(elapsed.seconds)
+    elapsed_seconds = int(elapsed.total_seconds())
 
     # Printing elapsed time
     if elapsed_seconds < 60:
